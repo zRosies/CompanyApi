@@ -79,10 +79,15 @@ const createUser = async(req, res)=>{
 
 const getUserById = async(req,res)=>{
     const userId = new ObjectId(req.params.id);
+    if(userId.length < 25){
+        res.status(404).json({ message: "No user Found" });
+    }
 
-    const result = await mongodb.getDb().db('company').collection('users').findOne({_id:userId});
-    console.log(result)
+    
+
+  
     try{
+        const result = await mongodb.getDb().db('company').collection('users').findOne({_id:userId});
         
         if (result.length === 0) {
             res.status(404).json({ message: "No data found" });
