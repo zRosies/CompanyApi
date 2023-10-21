@@ -1,11 +1,20 @@
+
+---- module that has the  typescript configs -------
+npm install ts-node -D
+
+-----------------installing nodemon-------------
+
+npm install --save-dev nodemon
+
+--------------------Dependencies config-------------
 {
-  "name": "pa-ts",
+   "name": "pa-ts",
   "version": "1.0.0",
   "description": "company",
-  "main": "server.ts",
+  "main": "server.ts", // path to your server file
   "scripts": {
     "start": "ts-node src/server.ts",
-    "dev": "nodemon --exec ts-node src/server.ts",
+    "dev": "nodemon --exec ts-node src/server.ts", // path to your server file
     "test": "test"
   },
   "author": "gustavo",
@@ -20,20 +29,10 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-<<<<<<< HEAD
-    "express-validator": "^7.0.1",
-    "mongodb": "^6.1.0",
-    "node": "^20.7.0",
-    "swagger-ui-express": "^5.0.0",
-    "ts-node": "^10.9.1",
-    "validatorjs": "^3.22.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-=======
     "express": "^4.18.2",
     "mongodb": "^6.2.0",
     "typescript": "^5.2.2"
->>>>>>> 2b3f2c8cfe44c71026db1825a1d8ca9e3bbd4562
   }
 }
+
+------------------------------------
